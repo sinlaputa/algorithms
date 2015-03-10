@@ -1,11 +1,10 @@
-import java.lang.Math;
-import java.lang.String;
+import algs4.Counter;
 
 public class Flips
 {
     public static void main(String[] args)
     {
-            int T = Interger.parseInt(args[0]);
+            int T = Integer.parseInt(args[0]);
             Counter heads = new Counter("heads");
             Counter tails = new Counter("tails");
             for (int t = 0; t < T; t++)
