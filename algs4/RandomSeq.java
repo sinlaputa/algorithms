@@ -23,7 +23,7 @@
  *  @author Robert Sedgewick
  *  @author Kevin Wayne
  */
-public class RandomSeq { 
+public class RandomSeq {
 
     // this class should not be instantiated
     private RandomSeq() { }
