@@ -1,5 +1,3 @@
-import algs4.Counter;
-
 public class Flips
 {
     public static void main(String[] args)

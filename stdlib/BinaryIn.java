@@ -8,6 +8,7 @@
  *
  *************************************************************************/
 
+
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -142,6 +143,9 @@ public final class BinaryIn {
     public boolean isEmpty() {
         return buffer == EOF;
     }
+
+    //Reads the next byte of data from the input stream. The value byte is returned as an int in the range 0 to 255.
+    //If no byte is available because the end of the stream has been reached, the value -1 is returned. This method blocks until input data is available, the end of the stream is detected, or an exception is thrown.
 
    /**
      * Read the next bit of data from the binary input stream and return as a boolean.

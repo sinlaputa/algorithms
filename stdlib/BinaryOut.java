@@ -9,7 +9,7 @@
  *
  *  The bytes written are not aligned.
  *
- *  [wayne 7.17.2013] fixed bugs in write(char x, int r) and 
+ *  [wayne 7.17.2013] fixed bugs in write(char x, int r) and
  *  write(int x, int r) to add return statement for (r == 8)
  *  and (r == 32) cases, respectively.
  *
@@ -19,6 +19,7 @@ import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.lang.System;
 import java.net.Socket;
 
 /**
@@ -92,7 +93,7 @@ public final class BinaryOut {
         // if buffer is full (8 bits), write out as a single byte
         N++;
         if (N == 8) clearBuffer();
-    } 
+    }
 
    /**
      * Write the 8-bit byte to the binary output stream.
@@ -150,7 +151,7 @@ public final class BinaryOut {
      */
     public void write(boolean x) {
         writeBit(x);
-    } 
+    }
 
    /**
      * Write the 8-bit byte to the binary output stream.
@@ -290,6 +291,7 @@ public final class BinaryOut {
 
         // create binary output stream to write to file
         String filename = args[0];
+
         BinaryOut out = new BinaryOut(filename);
         BinaryIn  in  = new BinaryIn();
 
